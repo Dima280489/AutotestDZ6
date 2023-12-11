@@ -4,7 +4,6 @@ package ru.netology.web.page;
 import com.codeborne.selenide.SelenideElement;
 import lombok.Value;
 import ru.netology.web.data.DataHelper;
-import ru.netology.web.test.TransferMoneyTest;
 
 import java.time.Duration;
 
@@ -13,13 +12,12 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 
-@Value
 public class TransferPage {
-    private final SelenideElement transferButton = $("[data-test-id='action-transfer'] input");
     private final SelenideElement amountInput = $("[data-test-id='amount'] input");
     private final SelenideElement fromInput = $("[data-test-id='from'] input");
     private final SelenideElement transferHead = $(byText("Пополнение карты"));
-    private final SelenideElement errorMessage = $("[data-test-id='error-notification'] input");
+    private final SelenideElement errorMessage = $("[data-test-id='error-notification']");
+    private final SelenideElement transferButton = $("[data-test-id='action-transfer'] input");
 
     public TransferPage() {
 

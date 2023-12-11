@@ -52,7 +52,7 @@ public class MoneyTransferTest {
         var amount = generateInvalidAmount(firstCardBalance);
         var transferPage = dashboardPage.selectCardToTransfer(secondCardInfo);
         transferPage.makeTransfer(String.valueOf(amount), firstCardInfo);
-        transferPage.findErrorMessage("Ошибка первода");
+        transferPage.findErrorMessage("Ошибка перевода, сумма перевода превышает баланс карты");
         var actualBalanceFirstCard = dashboardPage.getCardBalance(firstCardInfo);
         var actualBalanceSecondCard = dashboardPage.getCardBalance(secondCardInfo);
         assertEquals(firstCardBalance, actualBalanceFirstCard);

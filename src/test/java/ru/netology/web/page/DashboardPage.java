@@ -14,8 +14,6 @@ public class DashboardPage {
     private final String balanceStart = "баланс: ";
     private final String balanceFinish = " р.";
     private final SelenideElement heading = $("[data-test-id=dashboard]");
-    private final SelenideElement personalAccount = $("[data-test-id=dashboard]");
-    private final SelenideElement refreshButton = $("data-test-id=action-reload");
 
 
     public DashboardPage() {
